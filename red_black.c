@@ -99,14 +99,6 @@ static void *copy_fixed(const void *d, size_t sz) {
 /*  Type-descriptor table (maps RBType -> callbacks + elem_size)      */
 /* ================================================================== */
 
-typedef struct {
-    size_t      elem_size;
-    rb_cmp_fn   cmp;
-    rb_print_fn print;
-    rb_free_fn  free_elem;   /* NULL means plain free() */
-    rb_copy_fn  copy_elem;   /* NULL means memcpy-based copy */
-} TypeInfo;
-
 static const TypeInfo TYPE_TABLE[] = {
     /* RB_CHAR    */ { sizeof(char),               cmp_char,    print_char,    NULL, NULL },
     /* RB_UCHAR   */ { sizeof(unsigned char),      cmp_uchar,   print_uchar,   NULL, NULL },

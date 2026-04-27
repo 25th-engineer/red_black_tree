@@ -54,6 +54,14 @@ typedef struct RBTree {
     rb_copy_fn  copy_elem;
 } RBTree;
 
+typedef struct {
+    size_t      elem_size;
+    rb_cmp_fn   cmp;
+    rb_print_fn print;
+    rb_free_fn  free_elem;   /* NULL means plain free() */
+    rb_copy_fn  copy_elem;   /* NULL means memcpy-based copy */
+} TypeInfo;
+
 typedef struct StrResultSet {
     const char **strings;
     size_t       count;
