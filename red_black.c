@@ -59,54 +59,67 @@ static void print_char(const void *d)
 {
   printf("%c", *(const char *)d);
 }
+
 static void print_uchar(const void *d)
 {
   printf("%u", *(const unsigned char *)d);
 }
+
 static void print_short(const void *d)
 {
   printf("%hd", *(const short *)d);
 }
+
 static void print_ushort(const void *d)
 {
   printf("%hu", *(const unsigned short *)d);
 }
+
 static void print_int(const void *d)
 {
   printf("%d", *(const int *)d);
 }
+
 static void print_uint(const void *d)
 {
   printf("%u", *(const unsigned int *)d);
 }
+
 static void print_long(const void *d)
 {
   printf("%ld", *(const long *)d);
 }
+
 static void print_ulong(const void *d)
 {
   printf("%lu", *(const unsigned long *)d);
 }
+
 static void print_llong(const void *d)
 {
   printf("%lld", *(const long long *)d);
 }
+
 static void print_ullong(const void *d)
 {
   printf("%llu", *(const unsigned long long *)d);
 }
+
 static void print_float(const void *d)
 {
   printf("%g", *(const float *)d);
 }
+
 static void print_double(const void *d)
 {
   printf("%g", *(const double *)d);
 }
+
 static void print_ldouble(const void *d)
 {
   printf("%Lg", *(const long double *)d);
 }
+
 static void print_string(const void *d)
 {
   printf("%s", *(const char *const *)d);
